@@ -1,0 +1,91 @@
+.getstarted
+ {
+    padding:10px;
+    font-size:30px;
+    border:none;
+    border-radius:10px;
+    font-weight: 500;
+    border:2px solid white;
+    color:white;;
+    background:rgb(109, 109, 233);
+    cursor: pointer;
+
+ }
+ .loginButton
+ {
+padding:10px;
+font-size:30px;
+border:none;
+border-radius:10px;
+font-weight: 500;
+border:2px solid white;
+color:white;;
+margin-top:10px;
+background:rgb(109, 109, 233);
+cursor: pointer;
+ }
+ .mainBody
+ {
+     height: 100%;
+     display:flex;
+     flex-direction: column;
+
+ }
+ .titleName
+ {  
+  height: 40%;;
+  background-color:#f3f3f4;
+  border-bottom-left-radius:50%;
+  border-bottom-right-radius:50%;
+
+    
+ }
+h1{ animation-name            : pulse;
+    animation-duration        : 1s;
+    animation-iteration-count : infinite;
+    font-size:80px;
+    color: grey;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h6{
+    color:rgb(155, 146, 146);
+}
+
+ .loginDiv
+ {
+     flex:1;
+ }
+
+
+
+ @keyframes pulse {
+    from {
+        transform : scale(1);
+        opacity   : 1;
+    }
+    50% {
+        transform : scale(0.75);
+        opacity   : 0.25;
+    }
+    to {
+        transform : scale(1);
+        opacity   : 1;
+    }
+}
+
+.loginDiv
+{ text-align:left;
+   
+    font-weight:bold;
+   
+}
+.headings{
+    margin-left:10%;
+    width:50%;
+    color:rgb(95, 88, 88);
+}
+.LoginButtonOuterDiv
+{
+    margin-top:5%;
+    text-align:center;
+}
