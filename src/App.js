@@ -27,7 +27,7 @@ function App() {
          <Nav/>
         <Switch>
           <Suspense>
-          <PrivateRoute path= "/" component={Alldocs} isAuth={isLoggedIn}></PrivateRoute>
+          <PrivateRoute path= "/" exact  component={Alldocs} isAuth={isLoggedIn}></PrivateRoute>
           
            <Route path="/uploads"  component={Create}/> 
 

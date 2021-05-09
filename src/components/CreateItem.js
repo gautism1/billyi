@@ -45,7 +45,16 @@ const onChangeHandler=  function (e)
     return (
       <div className="create">
         <div className="createInnerDiv">
-        {isLoggedIn && <form onSubmit={submit} id="dataform"  encType="multipart/form-data">
+        <div className="headings">
+             <h3>
+             Please fill the form
+             </h3>
+             <h6>
+               All fields are compulsory
+             </h6> 
+             </div>
+        {isLoggedIn && 
+        <form onSubmit={submit} id="dataform"  encType="multipart/form-data">
             <input type="text" placeholder="Title" name="title" required></input><br></br>
             <input type="text" placeholder="Price" name="price"required></input><br></br>
             <input type="file" required name="UserPhoto" onChange={onChangeHandler}></input>

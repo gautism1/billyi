@@ -1,9 +1,6 @@
 .create
 {
-    height:100%;
-    color:white; 
-    text-align: center;
-    
+  text-align:left;
 }
 .createInnerDiv
 {
@@ -11,8 +8,9 @@ margin-top:5%;
 margin-right:5%;
 margin-left:5%;
 padding:10%;
-border:1px solid white;
-
+}
+h2{
+  margin-bottom:0;
 }
 form{
     height:auto;
@@ -24,43 +22,25 @@ input[type=text]{
     padding:10px;
     border-radius:5px;
     border:none;
-    background:none;
+   
     font-size:20px;
-    border-bottom:2px solid white;
-    padding-left: 0;
-    color:white;
+ 
+    
     outline: none;
 }
 input[type=file]{
     padding:10px;
-    border-radius:5px;
-    border:none;
-    background:none;
-    font-size:20px;
-      background:rgb(109, 109, 233);
-    padding-left: 0;
-    color:white;
-    outline: none;
+   
 }
 ::placeholder {
-    color: white;
+  
     opacity: 1; /* Firefox */
   }
 
   .createButton
   {
        
-    float:right;
-    margin-right:5%;
-    padding:5px;
-    font-size:15px;
-    border:none;
-    border-radius:10px;
-    border:1px solid white;
-    color:white;
-    background:rgb(109, 109, 233);
-    cursor: pointer;   
-
+   
   }
   #category
   {
@@ -73,7 +53,7 @@ input[type=file]{
       border:none;
       border-radius:10px;
       border:1px solid white;
-      color:white;
+       
       background:rgb(109, 109, 233);
 }
  
