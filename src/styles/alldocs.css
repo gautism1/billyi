@@ -1,0 +1,64 @@
+.allDocsDiv
+{
+    margin-left: 10%;
+    margin-right:10%;
+    text-align: left;
+    margin-top:5%;
+    margin-bottom:5%;
+    color:rgb(78, 74, 74);
+}
+.allDocsList    
+{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+
+}
+.itemDetails
+{margin-bottom:5%;
+    border-bottom:1px solid lightgray;
+    padding:10px;
+    text-align: left;
+    display:flex;
+    width: 300px;
+}
+.title
+{
+    color:gray;
+    letter-spacing: 2px;;
+}
+.symbol
+{   
+     margin-right:10%;
+    
+     
+}
+.itemCategory
+{
+color:#454444f7;
+margin-top:3%;
+letter-spacing: 2px;;}
+
+.itemPrice
+{
+    letter-spacing: 2px;;
+    font-weight: 500;
+}
+.itemPrice > p{
+    margin-bottom:0;
+    margin-top:5%;
+}
+.itemImage
+{
+     
+  
+    height:100%;
+    width:100%;
+}
+.itemImageDiv
+{
+   
+border:1px solid grey;
+padding:10px;
+margin-left:10%;border-radius:10px;
+}

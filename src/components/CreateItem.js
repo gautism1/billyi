@@ -51,7 +51,7 @@ const onChangeHandler=  function (e)
         {isLoggedIn && 
         <form onSubmit={submit} id="dataform"  encType="multipart/form-data">
             <input type="text" placeholder="Title" name="title" required></input><br></br>
-            <input type="text" placeholder="Price" name="price"required></input><br></br>
+            <input type="number" placeholder="Price" name="price"required></input><br></br>
          
             <span > Select Category</span> 
             <br></br>

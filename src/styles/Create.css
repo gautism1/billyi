@@ -21,7 +21,7 @@ form{
   
     padding: 5%;
 }
-input[type=text]{
+input{
     height:20px;
     padding:10px;
     border-radius:4px;
