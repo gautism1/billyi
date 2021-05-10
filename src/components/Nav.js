@@ -3,9 +3,7 @@ import { GlobalContext } from '../context/GlobalState';
 import  '../styles/Nav.css';
 import {GoogleLogout} from 'react-google-login';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+
   Link
 } from "react-router-dom";
 
@@ -13,7 +11,7 @@ function Nav() {
   const clientId =
   '450082845907-tij20g3mh4t1f1lqv8ups6544j63a11f.apps.googleusercontent.com';
 
-  const {isLoggedIn,email,logout }=useContext(GlobalContext);   
+  const {isLoggedIn,logout }=useContext(GlobalContext);   
   const Logout =()=>
   {
           var res = document.cookie;
@@ -24,7 +22,7 @@ function Nav() {
       }   
      localStorage.clear();
      logout();
-     window.location.href = '/';
+     
   }
     return (
       <div className="Nav">
@@ -36,7 +34,7 @@ function Nav() {
                             //  )}
                             buttonText="Logout"
                             onLogoutSuccess={Logout}>
-                    </GoogleLogout>
+                  </GoogleLogout>
        </div> }
    <nav>
           <ul>
@@ -46,9 +44,9 @@ function Nav() {
             <li>
               <Link to="/uploads">Upload File</Link>
             </li> */}
-            <li>
+           {isLoggedIn && <li>
               <Link to="/documents">All documents</Link>
-            </li>
+            </li>}
           </ul>
   </nav>
       </div> 

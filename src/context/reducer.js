@@ -1,4 +1,4 @@
-export default (state,action)=> {
+const fn= (state,action)=> {
     
     switch(action.type)
     {
@@ -39,3 +39,6 @@ export default (state,action)=> {
             return state;
     }   
 }     
+
+export default fn;
+

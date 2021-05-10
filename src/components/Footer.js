@@ -1,9 +1,8 @@
-import React,{useContext} from 'react';
-import { GlobalContext } from '../context/GlobalState';
+import React from 'react';
+
 import  '../styles/footer.css';
 function Footer() {
-
-  const {email }=useContext(GlobalContext);   
+  
     return (
       <div className="footer">
       <div className="footerInnerDiv">

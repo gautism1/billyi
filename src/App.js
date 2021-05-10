@@ -5,11 +5,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  
 } from "react-router-dom";
 import { GlobalContext } from './context/GlobalState';
 const Nav = lazy(() => import('./components/Nav'));
-const Body = lazy(() => import('./components/Body'));
+
 const Footer = lazy(() => import('./components/Footer'));
 const Create = lazy(() => import('./components/CreateItem'));
 const Alldocs=lazy(()=>import('./components/Alldocs') )
@@ -17,7 +17,7 @@ const PrivateRoute = lazy(()=>import('./HOC/PrivatRoute'))
 const renderLoader = () => <p>Loading</p>;
 function App() {
 
-  const {updateState,isLoggedIn,logout}=useContext(GlobalContext);   
+  const {isLoggedIn}=useContext(GlobalContext);   
 
   return (
     <Router >

@@ -2,6 +2,7 @@ import React  , {lazy} from 'react';
 import {Route} from 'react-router-dom';
 
 const Body = lazy(() => import('../components/Body'));
+// const Alldocs = lazy(() => import('../components/Body'));
 
 
 function PrivateRoute ({isAuth: isAuth , component:Component , ...rest}) {

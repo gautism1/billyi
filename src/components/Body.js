@@ -2,20 +2,20 @@ import React,{useContext} from 'react';
 import {
   Link
 } from "react-router-dom";
-import { lazy } from "react";
+ 
 import  '../styles/Body.css';
 import { GlobalContext } from '../context/GlobalState';
-import { GoogleLogin ,GoogleLogout} from 'react-google-login';
+import { GoogleLogin } from 'react-google-login';
 const axios = require('axios');
 var jwt=require('jsonwebtoken')
 
-const CreateItem = lazy(() => import("../components/CreateItem"));
+// const CreateItem = lazy(() => import("../components/CreateItem"));
 
 function Body() {
   const clientId =
   '450082845907-tij20g3mh4t1f1lqv8ups6544j63a11f.apps.googleusercontent.com';
 
-const {updateState,isLoggedIn,logout}=useContext(GlobalContext);   
+const {updateState,isLoggedIn}=useContext(GlobalContext);   
 
 const responseGoogle = (res) => {
   axios.post("http://localhost:5000/auth",{token:res.tokenId})
@@ -26,6 +26,7 @@ const responseGoogle = (res) => {
           var decoded = jwt.decode(res.data, {complete: true});
               updateState(decoded.payload);
               document.cookie = "cookieName="+res.data+";"+"path=/";
+              
         } 
         catch(err) {
            console.log(err)

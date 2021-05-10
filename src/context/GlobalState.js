@@ -1,6 +1,6 @@
 import React, { createContext , useReducer } from'react';
 import AppReducer from './reducer';
-const axios =require('axios');
+// const axios =require('axios');
 
 //initial state
  const initialstate=
@@ -16,10 +16,8 @@ export const GlobalContext=createContext(initialstate);
 export const GlobalProvider=  ({children})  =>  
 {
 const [state,dispatch]=useReducer(AppReducer,initialstate);
-
 async function updateState(Userdetails)
-{ 
-     
+{  
 dispatch({
     type:'update_user_details',
     data:Userdetails
@@ -33,26 +31,6 @@ async function logout()
     })
 }
 
-async function updateNotesInContext(data)
-{
-    dispatch({
-        type:'update_usernotes',
-        data
-    })
-}
-
-
-async function addNoteToDatabase(AddNoteObject)
-{
-  
-}
-
-async function  deleteFromDatabase(id)
-{    
-   
-}
-async function updateMerge(updatingIndex) { 
-}
 
 return (   
     <GlobalContext.Provider value={{
