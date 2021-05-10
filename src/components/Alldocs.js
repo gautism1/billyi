@@ -32,33 +32,44 @@ function Alldocs() {
         {isLoggedIn &&
         <div className="allDocsDiv">  <h3>Your Bills /Documents</h3>
             <div className="allDocsList">
-            {userData && userData.map((item,key)=>(    
+            {userData && userData.map((item,key)=>( 
+              <>   
             <div className="itemDetails">   
 
               <div className="symbol">&#128512;
                 </div> 
-                <div>
-                   <div className="title">  {item.title}
-                   </div>  
-                   <div className="itemCategory">
-                     {item.category}
-                     </div>
+                <div className="asdf">
+                <div className="divisonDetails">
+                    <div>
+                      <div className="title">  {item.title}
+                       </div>  
+                      <div className="itemCategory">
+                        {item.category}
+                       </div>  
+                    </div>
+                     <div>
                      <div className="itemPrice">
-                  <p>   ${item.price}</p> 
-                     </div>
-                  </div>
-               <div className="itemImageDiv">
-                    <img src={item.imageUrl} onClick={()=>
-                    {
+                    ${item.price}
+                     </div> 
+                    </div>
+                </div>
+                 <div className="itemImageDiv">
+                    <img src={item.imageUrl} onClick={(e)=>
+                    {e.preventDefault();
                       setImageDiv(!image);
             
-                    }}  className="itemImage"></img>
+                    }}  className="itemImage"/>
 
                   {image &&  <Item 
                     image={userData[key].imageUrl}
                     />}
-                 </div>
+                   
+                 </div> 
+              </div>
+             
             </div>
+              
+            </>
             ))}
             </div> 
         </div>
@@ -68,3 +79,4 @@ function Alldocs() {
   }
   export default Alldocs;
   
+ 

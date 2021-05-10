@@ -6,7 +6,10 @@ import  '../styles/alldocs.css';
 function item(params) {
   console.log(params)
     return (
- <div>
+ <div className="imagePopup">
+    <div>
+      heello
+    </div>
 
  </div>
     );
