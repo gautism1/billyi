@@ -28,9 +28,9 @@ function App() {
         <Switch>
           <Suspense>
           <PrivateRoute path= "/" exact  component={Alldocs} isAuth={isLoggedIn}></PrivateRoute>
-          
+            
            <Route path="/uploads"  component={Create}/> 
-
+           <Route path="/documents" component={Alldocs}/>
        </Suspense>
         </Switch>
         <Footer/>

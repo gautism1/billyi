@@ -46,7 +46,7 @@ const responseGoogle = (res) => {
       <div className="mainBody">
        { !isLoggedIn &&<div className="titleName"> 
             <span>  
-            <h1>B</h1>
+            <h1>B.</h1>
             </span> 
           </div>}
      {
@@ -65,9 +65,6 @@ const responseGoogle = (res) => {
                 
             <GoogleLogin
                clientId={clientId}
-        //  render={renderProps => (
-        //      <button onClick={renderProps.onClick} disabled={renderProps.disabled} className="loginButon"> Login with Gmail</button>
-        //    )}
        onSuccess={responseGoogle}
        onFailure={onFail}
        cookiePolicy={'single_host_origin'}

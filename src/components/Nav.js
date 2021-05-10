@@ -24,6 +24,7 @@ function Nav() {
       }   
      localStorage.clear();
      logout();
+     window.location.href = '/';
   }
     return (
       <div className="Nav">
@@ -37,19 +38,19 @@ function Nav() {
                             onLogoutSuccess={Logout}>
                     </GoogleLogout>
        </div> }
-   {/* <nav>
+   <nav>
           <ul>
-            <li>
+            {/* <li>
               <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/uploads">Upload File</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/documents">All documents</Link>
             </li>
           </ul>
-  </nav> */}
+  </nav>
       </div> 
     );
   }

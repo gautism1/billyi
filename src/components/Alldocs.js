@@ -6,8 +6,20 @@ function Alldocs() {
   const {isLoggedIn,user_id  }=useContext(GlobalContext);  
 const [userData,setUserData]=useState();
   useEffect(() => {
-    axios.get(`http://localhost:5000/imageupload`,{
-       
+
+//   const a=  fetch('http://localhost:5000/imageupload', {
+//       method: 'GET',
+//       mode: 'no-cors',
+//       credentials: 'include'
+//     })
+//       .then((response) => {console.log(response)
+//  }
+//      ).catch((err) => {
+//         console.log(err);
+//     });
+
+ axios.get(`http://localhost:5000/imageupload`,
+ { withCredentials: true ,mode: 'no-cors',
     }).then((res) => {
 
        console.log(res.data);
@@ -15,7 +27,9 @@ const [userData,setUserData]=useState();
     {
         console.log(err,"error found during fetching")
     })
+  
 },[]);
+ 
     return (
    <nav>
         {!isLoggedIn  && <p>All your docs are visible here ,kindly login to see them</p>}
@@ -23,7 +37,7 @@ const [userData,setUserData]=useState();
         <div className="list">
             <div>
               
-            </div>
+            </div>Gauti gauti
             Hello how are you
         </div>
         }

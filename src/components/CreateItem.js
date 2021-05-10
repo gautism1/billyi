@@ -31,6 +31,8 @@ function CreateItem() {
     }).then((data)=>
     {
        alert("kudos !! Product details have been successfully uploaded ");
+       document.getElementById("dataform").reset();
+
     }
 ).catch((err)=>
 {    console.log(err);
@@ -45,21 +47,13 @@ const onChangeHandler=  function (e)
     return (
       <div className="create">
         <div className="createInnerDiv">
-        <div className="headings">
-             <h3>
-             Please fill the form
-             </h3>
-             <h6>
-               All fields are compulsory
-             </h6> 
-             </div>
+        
         {isLoggedIn && 
         <form onSubmit={submit} id="dataform"  encType="multipart/form-data">
             <input type="text" placeholder="Title" name="title" required></input><br></br>
             <input type="text" placeholder="Price" name="price"required></input><br></br>
-            <input type="file" required name="UserPhoto" onChange={onChangeHandler}></input>
-            <br></br>
-            <span> Select Category</span> 
+         
+            <span > Select Category</span> 
             <br></br>
          <select name="category" id="category">
                  <option value="Electricity">Electricity</option>
@@ -68,8 +62,10 @@ const onChangeHandler=  function (e)
                  <option value="House_Rent">House Rent</option>
              </select>
              <br></br>
+             <input type="file" required name="UserPhoto" onChange={onChangeHandler}></input>
+            <br></br>
             {/* <input type="text" placeholder="Catergory" name="category" required></input><br></br> */}
-            <input type="submit"className="createButton" value="Save"></input>
+            <input type="submit"className="createButton" value="Create"></input>
         </form>}
 
         {!isLoggedIn && <p>Kindly login first</p>}
