@@ -1,15 +1,94 @@
-.footer
-{
- 
-   
-    left: 0;
-    bottom: 0;
-    width: 100%;
-     font-size:20px;
-    color: grey;
-    text-align: center;
+ footer
+ { 
+   width: 100%;
+   bottom: 0;
 }
-.footerInnerDiv
-{    
-    font-size:15px;
+.footerInnerDiv  
+{    padding:30px;
+   padding-bottom:0;
+   display: flex;
+   justify-content: center;
+   font: 400 14px/16px Segoe UI,system-ui,-apple-system,sans-serif;
+   text-align: center;
+    flex-wrap: wrap;
+   color: #DBDCE1;
+   background: #353748;
+}
+.footerDiv{
+   text-align:center;
+}
+.footerLeft
+{
+   display: flex;
+   -ms-flex-wrap: wrap;
+   flex-wrap: wrap;
+   margin-right: -16px;
+   margin-left: -16px;
+}
+.footerDiv1 ul 
+{
+    
+   text-align: left;
+   padding-left:0;
+   padding-right:70px;
+}
+.footerDiv1  li
+{
+display:block;
+max-width:200px;
+margin:10%;
+color:    #DBDCE1;;
+padding: 0 16px;
+position: relative;
+margin-left:0;
+width:100px;
+}
+.footerDiv2  li
+{  display:block;
+   max-width:300px;
+   margin:10%;
+   color:    #DBDCE1;;
+   padding: 0 16px;
+   position: relative;
+   margin-left:0;
+   width:100px;
+}
+.footerDiv2 ul 
+{
+   padding-right:70px;
+   text-align: left;
+   padding-left:0
+}
+h3{
+   text-align:left;
+   padding: 0 16px;
+}
+.footerRight
+{
+   text-align:left;
+   max-width: 400px;;
+}
+.footerRight   p{
+   padding:0;
+   font-weight: 900;
+   font-size:15px;
+   border: 0;
+   font: inherit;
+   font-size: 100%;
+   vertical-align: baseline;word-spacing: 2px;
+   line-height:15pt;
+}
+hr{
+   margin:0;
+   
+}
+h3{
+   margin-left:0;
+}
+.copyright
+{
+   background: #353748;
+   color:#DBDCE1;
+   padding:10px;
+   letter-spacing: 1px;;    
 }

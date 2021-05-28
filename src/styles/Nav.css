@@ -1,29 +1,51 @@
- 
- ul{
-     margin:0;   
-     background-color: #f3f3f4;   
+header{
+    background-color: #f3f3f4;
+}
+ul >li>a
+ {
+     color:grey;
+     text-decoration: none;
+     font-size:20px;
+     font-weight:600;
  }
-li{
-    
-    list-style: none;
+ ul >li>a:hover
+ {
+     color:black;
+ }
+ ul{
+    padding-left: 0;
+ }
+ ul>li{
     display:inline;
-    
-}   
-li:link{
-    text-decoration:none;   
-}
-a{
-    margin:3%;
-    text-decoration:none;
-    color:grey  ;
-    font-weight: bold;
-}
-a:hover{
-     color:darkgrey;
-}
- 
- .logoutOuterDiv
- { 
-     
-    
+    margin-right:5%;
+    margin-left:5%;
+    padding:10px;
+ }
+ ul{
+     text-align:right;
+ }
+ .navItems
+ {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0px 0px 8px 0px rgb(158 153 153);
+ }
+  .loginButton
+  {
+    margin-right:3%;
+  }
+ .logoutOuterDiv >button
+ {
+    border:grey;
+    font-size: 15px;  
+    padding: 10px;
+    background: rgb(77 203 135);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width:100px;
  }

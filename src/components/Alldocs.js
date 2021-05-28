@@ -1,6 +1,6 @@
 import React,{lazy,useContext,useState, useEffect} from 'react';
 import { GlobalContext } from '../context/GlobalState';
-
+import { Link } from 'react-router-dom';
 import  '../styles/alldocs.css';
 const axios=require('axios');
 
@@ -9,7 +9,11 @@ function Alldocs() {
   
   const {isLoggedIn }=useContext(GlobalContext);  
   const [userData,setUserData]=useState(null);
-  const [image,setImageDiv]=useState(false);
+  const [imagedesc,setImageDiv]=useState({
+    image:false,
+    imageurl:null
+    
+  });
   
  
   useEffect(() => {
@@ -26,19 +30,31 @@ function Alldocs() {
     })
     
 },[]);
+let closeImage= function()
+{
+  setImageDiv(
+    {
+      image:false,
+      imageurl:null
+    }
+  )
+}
     return (
   <>
         {!isLoggedIn  && <p>All your docs are visible here ,kindly login to see them</p>}
         {isLoggedIn &&
-        <div className="allDocsDiv">  <h3>Your Bills /Documents</h3>
+        <div className="allDocsDiv">  
+       {
+          isLoggedIn &&  
+         <div className="addButtonDiv">  
+            <Link to="/uploads" className="createNewButton">   Create New  </Link>
+         </div>
+        } 
             <div className="allDocsList">
             {userData && userData.map((item,key)=>( 
               <>   
             <div className="itemDetails">   
-
-              <div className="symbol">&#128512;
-                </div> 
-                <div className="asdf">
+                <div className="DetailsIteInfo">
                 <div className="divisonDetails">
                     <div>
                       <div className="title">  {item.title}
@@ -49,28 +65,39 @@ function Alldocs() {
                     </div>
                      <div>
                      <div className="itemPrice">
-                    ${item.price}
+                    $ {item.price}
                      </div> 
+                  
                     </div>
                 </div>
+               <div>----------------</div>
                  <div className="itemImageDiv">
-                    <img src={item.imageUrl} onClick={(e)=>
-                    {e.preventDefault();
-                      setImageDiv(!image);
+                    <img src={item.imageUrl} 
+                    alt="Image of the document" 
+                    onClick={(event)=>
+                    {   
+                       setImageDiv({
+                         image:!imagedesc.image,
+                         imageurl:item.imageUrl
+                       });
             
                     }}  className="itemImage"/>
 
-                  {image &&  <Item 
-                    image={userData[key].imageUrl}
-                    />}
+                  
                    
                  </div> 
+                 <div className="deleteItem">
+                   <button className="createNewButton delete"   >
+                    Remove
+                   </button>
+                 </div>
               </div>
              
             </div>
               
             </>
             ))}
+       
             </div> 
         </div>
         }

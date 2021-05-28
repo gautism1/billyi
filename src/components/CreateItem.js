@@ -5,7 +5,7 @@ const axios = require('axios');
 function CreateItem() {
   const [img,setImage]=useState();
 
-  const { user_id ,isLoggedIn}=useContext(GlobalContext);  
+  const { user_id,isLoggedIn}=useContext(GlobalContext);  
   
   const submit=function(e)
   { e.preventDefault();

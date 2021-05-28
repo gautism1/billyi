@@ -2,55 +2,58 @@ import React,{useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import  '../styles/Nav.css';
 import {GoogleLogout} from 'react-google-login';
-import {
-
-  Link
-} from "react-router-dom";
+import { NavLink,useHistory } from 'react-router-dom';
 
 function Nav() {
   const clientId =
   '450082845907-tij20g3mh4t1f1lqv8ups6544j63a11f.apps.googleusercontent.com';
-
+  const history = useHistory();
   const {isLoggedIn,logout }=useContext(GlobalContext);   
   const Logout =()=>
   {
           var res = document.cookie;
           var multiple = res.split(";");  
-          for(var i = 0; i < multiple.length; i++) {
+          for(var i = 0; i < multiple.length; i++)
+         {
           var key = multiple[i].split("=");
           document.cookie = key[0]+` =; expires = ${new Date()} UTC`;
-      }   
+         }   
      localStorage.clear();
      logout();
-     
+     history.push('/')
   }
     return (
-      <div className="Nav">
-     {     isLoggedIn &&  <div className="logoutOuterDiv"> 
+    <header>
+   <div className="navItems" >   
+            <ul >   
+            <li>
+                <NavLink to="/documents">Documents</NavLink>
+                </li>
+                <li>
+                <NavLink to="/features ">Features</NavLink>
+                </li>
+              
+           </ul>
+        <div className="loginButton">
+        {     isLoggedIn && 
+         <div className="logoutOuterDiv"> 
                 <GoogleLogout
                             clientId={clientId}
-                            // render={renderProps => (
-                            //  <button onClick={renderProps.onClick} disabled={renderProps.disabled} className="logout"> Log out</button>
-                            //  )}
+                            render={renderProps => (
+                             <button onClick={renderProps.onClick} disabled={renderProps.disabled} className="logout"> Log out</button>
+                             )}
                             buttonText="Logout"
                             onLogoutSuccess={Logout}>
                   </GoogleLogout>
-       </div> }
-   <nav>
-          <ul>
-            {/* <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/uploads">Upload File</Link>
-            </li> */}
-           {isLoggedIn && <li>
-              <Link to="/documents">All documents</Link>
-            </li>}
-          </ul>
-  </nav>
-      </div> 
+       </div> 
+      }
+       </div>
+       </div>
+       </header>
     );
   }
   export default Nav;
   
+
+
+ 

@@ -1,8 +1,5 @@
 import React,{useContext} from 'react';
-import {
-  Link
-} from "react-router-dom";
- 
+import { useHistory } from 'react-router-dom';
 import  '../styles/Body.css';
 import { GlobalContext } from '../context/GlobalState';
 import { GoogleLogin } from 'react-google-login';
@@ -11,7 +8,8 @@ var jwt=require('jsonwebtoken')
 
 // const CreateItem = lazy(() => import("../components/CreateItem"));
 
-function Body() {
+function Home() {
+  const history = useHistory();
   const clientId =
   '450082845907-tij20g3mh4t1f1lqv8ups6544j63a11f.apps.googleusercontent.com';
 
@@ -25,8 +23,11 @@ const responseGoogle = (res) => {
          {
           var decoded = jwt.decode(res.data, {complete: true});
               updateState(decoded.payload);
+             
               document.cookie = "cookieName="+res.data+";"+"path=/";
-              
+                history.push('/documents')
+                console.log("sss",isLoggedIn)
+             //  window.location.href="/documents";
         } 
         catch(err) {
            console.log(err)
@@ -42,10 +43,10 @@ const responseGoogle = (res) => {
     {
     alert("Login failed :(")
     }
-   
     return (
       <div className="mainBody">
-       { !isLoggedIn &&<div className="titleName"> 
+      
+    { !isLoggedIn && <div className="titleName"> 
             <span>  
             <h1>B.</h1>
             </span> 
@@ -66,24 +67,27 @@ const responseGoogle = (res) => {
                 
             <GoogleLogin
                clientId={clientId}
-       onSuccess={responseGoogle}
-       onFailure={onFail}
-       cookiePolicy={'single_host_origin'}
-               isSignedIn={true}/>
-             
+               onSuccess={responseGoogle}
+               onFailure={onFail}
+               cookiePolicy={'single_host_origin'}
+               isSignedIn={true}
+               render={renderProps => (
+                <button onClick={renderProps.onClick} disabled={renderProps.disabled} className="login"> Login</button>
+                )}
+               />        
             </div>
-    
+
        </div> 
      } 
-     {
-       isLoggedIn &&  
-      <div className="addButtonDiv">  
-         <Link to="/uploads" className="getstarted">  <span className="headings"> Create a New Bill</span>   </Link>
-      </div>
-     } 
+     {  isLoggedIn && <div>Home logged in {isLoggedIn
+      }
+       </div>
+
+     }
+   
       </div>
     );
   }
   
-  export default Body;
+  export default Home;
   

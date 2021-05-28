@@ -9,16 +9,17 @@ import {
 } from "react-router-dom";
 import { GlobalContext } from './context/GlobalState';
 const Nav = lazy(() => import('./components/Nav'));
-
-const Footer = lazy(() => import('./components/Footer'));
-const Create = lazy(() => import('./components/CreateItem'));
+const Home = lazy(() => import('./components/Home'));
+const CreateItem = lazy(() => import('./components/CreateItem'));
 const Alldocs=lazy(()=>import('./components/Alldocs') )
 const PrivateRoute = lazy(()=>import('./HOC/PrivatRoute'))
-const renderLoader = () => <p>Loading</p>;
+const Feature=lazy(()=>import('./components/feature') )
+const Footer=lazy(()=>import('./components/Footer') )
+const renderLoader = () => <h3> Please wait while loading....
+  </h3>;
 function App() {
-
-  const {isLoggedIn}=useContext(GlobalContext);   
-
+  const {isLoggedIn}=useContext(GlobalContext); 
+ 
   return (
     <Router >
   < GlobalProvider>
@@ -27,13 +28,13 @@ function App() {
          <Nav/>
         <Switch>
           <Suspense>
-          <PrivateRoute path= "/" exact  component={Alldocs} isAuth={isLoggedIn}></PrivateRoute>
-            
-           <Route path="/uploads"  component={Create}/> 
-           <Route path="/documents" component={Alldocs}/>
+           <Route path= "/" exact   component={Home}></Route> 
+           <Route path="/features"  component={Feature}></Route>
+           <PrivateRoute path="/uploads"  component={CreateItem}  isAuth={!isLoggedIn}></PrivateRoute> 
+           <PrivateRoute path="/documents" component={Alldocs}     isAuth={!isLoggedIn}></PrivateRoute>
        </Suspense>
-        </Switch>
-        <Footer/>
+      </Switch>
+      <Footer/>
       </div>
     </Suspense>
   </GlobalProvider>
