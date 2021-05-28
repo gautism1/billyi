@@ -5,7 +5,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  
 } from "react-router-dom";
 import { GlobalContext } from './context/GlobalState';
 const Nav = lazy(() => import('./components/Nav'));

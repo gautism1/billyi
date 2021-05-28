@@ -17,7 +17,7 @@ function Alldocs() {
  
   useEffect(() => {
    
-      axios.get(`http://localhost:5000/imageupload`,
+      axios.get(`/imageupload`,
       { withCredentials: true ,mode: 'no-cors',
             })
       .then((res) => {

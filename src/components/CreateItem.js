@@ -24,7 +24,7 @@ function CreateItem() {
     data.append('price',obj.price)
     data.append('user_id',user_id)
  
-    axios.post("http://localhost:5000/imageupload",data,{
+    axios.post("/imageupload",data,{
         headers:{
             'Content-type':'multipart/form-data'
         }
