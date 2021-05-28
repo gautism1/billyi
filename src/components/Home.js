@@ -10,10 +10,9 @@ var jwt=require('jsonwebtoken')
 
 function Home() {
   const history = useHistory();
- 
-  // '450082845907-tij20g3mh4t1f1lqv8ups6544j63a11f.apps.googleusercontent.com';
-  const clientId ='804279594253-i65b0m9kd0ei03n3hhi5ks569ge53n5u.apps.googleusercontent.com' ;
-
+  const clientId =
+  '450082845907-tij20g3mh4t1f1lqv8ups6544j63a11f.apps.googleusercontent.com';
+  // 804279594253-i65b0m9kd0ei03n3hhi5ks569ge53n5u.apps.googleusercontent.com    
 const {updateState,isLoggedIn}=useContext(GlobalContext);   
 
 const responseGoogle = (res) => {
