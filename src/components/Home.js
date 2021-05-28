@@ -16,7 +16,7 @@ function Home() {
 const {updateState,isLoggedIn}=useContext(GlobalContext);   
 
 const responseGoogle = (res) => {
-  axios.post("http://localhost:5000/auth",{token:res.tokenId})
+  axios.post("/auth",{token:res.tokenId})
   .then(res=>
     {      
          try 
@@ -24,10 +24,8 @@ const responseGoogle = (res) => {
           var decoded = jwt.decode(res.data, {complete: true});
               updateState(decoded.payload);
              
-              document.cookie = "cookieName="+res.data+";"+"path=/";
+              document.cookie = `cookieName=${res.data};path=/`;
                 history.push('/documents')
-                console.log("sss",isLoggedIn)
-             //  window.location.href="/documents";
         } 
         catch(err) {
            console.log(err)

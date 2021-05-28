@@ -1,10 +1,9 @@
-import React,{lazy,useContext,useState, useEffect} from 'react';
+import React,{useContext,useState, useEffect} from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import { Link } from 'react-router-dom';
 import  '../styles/alldocs.css';
 const axios=require('axios');
 
-const Item = lazy(()=>import('./item'))
 function Alldocs() {
   
   const {isLoggedIn }=useContext(GlobalContext);  
@@ -30,18 +29,12 @@ function Alldocs() {
     })
     
 },[]);
-let closeImage= function()
-{
-  setImageDiv(
-    {
-      image:false,
-      imageurl:null
-    }
-  )
-}
+
     return (
   <>
-        {!isLoggedIn  && <p>All your docs are visible here ,kindly login to see them</p>}
+        {!isLoggedIn  && <h3>All your docs are visible here ,kindly login to see them</h3>
+        
+        }
         {isLoggedIn &&
         <div className="allDocsDiv">  
        {
@@ -72,8 +65,8 @@ let closeImage= function()
                 </div>
                <div>----------------</div>
                  <div className="itemImageDiv">
-                    <img src={item.imageUrl} 
-                    alt="Image of the document" 
+                    < img src={item.imageUrl} 
+                    alt="document" 
                     onClick={(event)=>
                     {   
                        setImageDiv({
@@ -81,7 +74,7 @@ let closeImage= function()
                          imageurl:item.imageUrl
                        });
             
-                    }}  className="itemImage"/>
+                    }}  className="itemImage" />
 
                   
                    
