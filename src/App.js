@@ -28,7 +28,7 @@ function App() {
         <Switch>
           <Suspense>
            <Route path= "/" exact   component={Home}></Route> 
-           <Route path="/features"  component={Feature}></Route>
+           <Route path="/features" exact component={Feature}></Route>
            <PrivateRoute path="/uploads"  component={CreateItem}  isAuth={!isLoggedIn}></PrivateRoute> 
            <PrivateRoute path="/documents" component={Alldocs}     isAuth={!isLoggedIn}></PrivateRoute>
        </Suspense>
