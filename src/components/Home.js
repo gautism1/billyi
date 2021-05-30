@@ -5,9 +5,7 @@ import { GlobalContext } from '../context/GlobalState';
 import { GoogleLogin } from 'react-google-login';
 const axios = require('axios');
 var jwt=require('jsonwebtoken')
-
 // const CreateItem = lazy(() => import("../components/CreateItem"));
-
 function Home() {
   const history = useHistory();
   const clientId =
@@ -16,7 +14,7 @@ function Home() {
 const {updateState,isLoggedIn}=useContext(GlobalContext);   
 
 const responseGoogle = (res) => {
-  axios.post("https://billyi.herokuapp.com/auth",{token:res.tokenId})
+  axios.post("/auth",{token:res.tokenId})
   .then(res=>
     {      
          try 

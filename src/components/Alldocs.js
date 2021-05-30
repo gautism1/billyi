@@ -20,10 +20,10 @@ function Alldocs() {
       { withCredentials: true ,mode: 'no-cors',
             })
       .then((res) => {
+        console.log(res.data);
            if(res.data==null)
              setUserData(0);
-             else  setUserData(res.data);
-           
+             else  setUserData(res.data);   
     }).catch((err)=>
     {
       console.log(err,"error found during fetching")
@@ -60,6 +60,7 @@ function Alldocs() {
                      <div>
                      <div className="itemPrice">
                     $ {item.price}
+                  
                      </div> 
                   
                     </div>
@@ -78,7 +79,9 @@ function Alldocs() {
                     }}  className="itemImage" />
    
                  </div> 
+            
                  <div className="deleteItem">
+                 <a href={item.imageUrl} className="createNewButton download" download > Download</a>
                    <button className="createNewButton delete"  onClick={()=>del(item,key)} >
                     Remove
                    </button>
