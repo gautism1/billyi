@@ -16,8 +16,8 @@ function Alldocs() {
     imageurl:null  
   });
   useEffect(() => {
-      axios.get(`/imageupload`,
-      { withCredentials: true ,mode: 'no-cors',
+      axios.get(`https://billyi.herokuapp.com/imageupload`,
+      { withCredentials: true,
             })
       .then((res) => {
         console.log(res.data);

@@ -14,7 +14,7 @@ function Home() {
 const {updateState,isLoggedIn}=useContext(GlobalContext);   
 
 const responseGoogle = (res) => {
-  axios.post("/auth",{token:res.tokenId})
+  axios.post("https://billyi.herokuapp.com/auth",{token:res.tokenId})
   .then(res=>
     {      
          try 

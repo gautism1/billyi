@@ -24,7 +24,7 @@ function CreateItem() {
     data.append('price',obj.price)
     data.append('user_id',user_id)
  
-    axios.post("/imageupload",data,{
+    axios.post("https://billyi.herokuapp.com/imageupload",data,{
         headers:{
             'Content-type':'multipart/form-data'
         }
