@@ -23,7 +23,7 @@
   border-bottom-left-radius:50%;
   border-bottom-right-radius:50%;
  }
-h1{
+.homeH1{
     text-align:center;
     animation-name            : pulse;
     animation-duration        : 1s;

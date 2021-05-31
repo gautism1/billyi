@@ -40,7 +40,7 @@ function Home() {
       {!isLoggedIn && (
         <div className="titleName">
           <span>
-            <h1>B.</h1>
+            <h1 className="homeH1">B.</h1>
           </span>
         </div>
       )}
