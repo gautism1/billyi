@@ -1,0 +1,42 @@
+.newLetterInputDiv
+{
+    display:flex;
+     flex-wrap: wrap;
+    padding:10px;
+    justify-content: center;
+}
+.contactDetailsInner{
+    text-align:left;
+    padding:20px;
+    height:auto;
+    width:auto;
+    
+}
+.contactDetails
+{
+    margin-right:10%;
+}
+.contactDetailsInner >h2
+{
+    margin-top:0;
+    color:grey;padding-left:0;
+}
+.textareaContactDetails
+{
+    height:auto;
+    min-height:60px;
+}
+.codeAddress
+{font-weight: bold;;
+   
+}
+.codeAddress >p{
+    color:grey;
+    font-size:16px;
+    padding-left: 0;
+    margin-top:0;
+}
+.textareaContactDetails
+{
+    padding-top:0;
+}

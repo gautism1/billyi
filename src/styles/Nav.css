@@ -13,6 +13,7 @@ ul >li>a
      color:black;
  }
  ul{
+     width:100%;
     padding-left: 0;
  }
  ul>li{
