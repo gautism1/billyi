@@ -5,7 +5,7 @@ import bell from "../assets/bell.svg";
 import subscribe from "../assets/subscribe.svg";
 function Feature() {
   return (
-    <section>
+    
       <div>
         <h2>
           Hate searching bills ? <br></br>....Let Billyi do the work for you
@@ -37,7 +37,7 @@ function Feature() {
           </div>
         </div>
       </div>
-    </section>
+    
   );
 }
 export default Feature;

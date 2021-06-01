@@ -1,9 +1,13 @@
   h2{
       color:#453e3e;
      padding-top:3%;
-     margin-top:5%;
+     margin-top:3%;
      padding:20px;
      font-size:40px;
+  }
+  section{
+
+    margin:4%;
   }
  h4{
      padding:20px;

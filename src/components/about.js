@@ -3,7 +3,7 @@ import '../styles/about.css'
 function AboutCode() {
     return (
       <div className="mission">
-          <section>
+         
                <h1>
                  Who  makes  "Billyi"
                 </h1>
@@ -29,7 +29,7 @@ function AboutCode() {
                       <b> Does free-lancing projects </b>
                    </p>
              
-          </section>
+          
       </div>
     );
   }

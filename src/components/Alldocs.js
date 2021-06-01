@@ -3,22 +3,34 @@ import { GlobalContext } from "../context/GlobalState";
 import { Link } from "react-router-dom";
 import "../styles/alldocs.css";
 const axios = require("axios");
+var jwt = require("jsonwebtoken");
 
 function Alldocs() {
-  const del = function (item, key) {
-    console.log(key, item);
-  };
-  const { isLoggedIn } = useContext(GlobalContext);
+  const { updateState, isLoggedIn } = useContext(GlobalContext);
   const [userData, setUserData] = useState(null);
   const [imagedesc, setImageDiv] = useState({
     image: false,
     imageurl: null,
   });
+
+  const del=function(key,item)
+  {
+      axios
+      .delete(`/imageupload/${item._id}`)
+      .then((data)=>{console.log(data)
+                    alert("kindly refresh the page")}
+      )
+      .catch(err=>console.log(err))
+  }
   useEffect(() => {
     axios
       .get(`/imageupload`, { withCredentials: true })
       .then((res) => {
-        console.log(res.data);
+        const rawCookie = document.cookie.split(";")[1].split("=")[1];
+
+        var decoded = jwt.decode(rawCookie, { complete: true });
+        updateState(decoded.payload);
+
         if (res.data == null) setUserData(0);
         else setUserData(res.data);
       })
@@ -30,9 +42,11 @@ function Alldocs() {
   return (
     <>
       {!isLoggedIn && (
- <h1>
- Kindly please Wait Under development <br></br>Please drop your mail for the notification
- </h1>      )}
+        <h1>
+          Kindly please Wait Under development <br></br>Please drop your mail
+          for the notification
+        </h1>
+      )}
 
       {isLoggedIn && (
         <div className="allDocsDiv">
@@ -52,11 +66,15 @@ function Alldocs() {
                     <div className="DetailsIteInfo">
                       <div className="divisonDetails">
                         <div>
-                          <div className="title"> {item.title}</div>
-                          <div className="itemCategory">{item.category}</div>
+                          <div className="title"> <span className="type">Name</span><br></br>
+                          {item.title}</div>
+                          <div className="itemCategory"><span className="type">Category</span><br></br>
+                          {item.category}</div>
                         </div>
                         <div>
-                          <div className="itemPrice">$ {item.price}</div>
+                          <div className="itemPrice"><span className="type">Amount</span><br></br>
+                          
+                          $ {item.price}</div>
                         </div>
                       </div>
                       <div>----------------</div>
@@ -80,12 +98,11 @@ function Alldocs() {
                           className="createNewButton download"
                           download
                         >
-                          {" "}
+                      
                           Download
                         </a>
-                        <button
-                          className="createNewButton delete"
-                          onClick={() => del(item, key)}
+                        <button className="createNewButton delete"
+                        onClick={()=>del(key,item)}
                         >
                           Remove
                         </button>

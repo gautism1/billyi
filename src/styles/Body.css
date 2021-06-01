@@ -2,9 +2,12 @@
  a{
      color:white;
  }
- .loginButton
- {
 
+ .type
+ {
+    font-size:12px;
+    color:rgb(138, 138, 138);
+      
  }
  .mainBody  
  {
@@ -35,14 +38,10 @@
 h6{
     color:rgb(155, 146, 146);
 }
-
  .loginDiv
  {
      flex:1;
  }
-
-
-
  @keyframes pulse {
     from {
         transform : scale(1);

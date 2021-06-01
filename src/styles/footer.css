@@ -63,6 +63,7 @@ width:100px;
 h3{
    text-align:left;
    padding: 0 16px;
+   margin-left:0;
 }
 .footerRight
 {
@@ -83,9 +84,7 @@ hr{
    margin:0;
    
 }
-h3{
-   margin-left:0;
-}
+ 
 .copyright
 {
    background: #353748;

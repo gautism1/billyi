@@ -24,6 +24,9 @@ function Nav() {
     <header>
       <div className="navItems">
         <ul>
+        <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
           <li>
             <NavLink to="/documents">Bills</NavLink>
           </li>

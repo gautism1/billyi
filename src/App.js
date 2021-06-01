@@ -25,7 +25,10 @@ function App() {
             <Nav />
             <Switch>
               <Suspense>
-                <Route path="/" exact component={Home}></Route>
+                <Route path="/" 
+                exact 
+                component={Home}
+                ></Route>
                 <Route path="/features" exact component={Feature}></Route>
                 <Route path="/about" exact component={About}></Route>
                 <Route path="/contact" exact component={Contact}></Route>

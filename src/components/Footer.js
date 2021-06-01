@@ -9,7 +9,7 @@ function Footer() {
           <div className="footerInnerDiv">
             <div className="footerLeft">
               <div className="footerDiv1">
-                <h3>BILLYI</h3>
+               
                 <ul>
                   <li>About</li>
                   <li>Features</li>
@@ -20,7 +20,7 @@ function Footer() {
                 </ul>
               </div>
               <div className="footerDiv2">
-                <h3>Follow Us</h3>
+                
                 <ul>
                   <li>Blog</li>
                   <li>Twitter</li>
