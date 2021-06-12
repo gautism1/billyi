@@ -34,11 +34,14 @@ function Nav() {
             <NavLink to="/features">Features</NavLink>
           </li>
           <li>
-            <NavLink to="/about">About us</NavLink>
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
           </li>
         </ul>
-        <div className="loginButton">
-          {isLoggedIn && (
+        {isLoggedIn && (   <div className="loginButton">
+         
             <div className="logoutOuterDiv">
               <GoogleLogout
                 clientId={clientId}
@@ -56,8 +59,8 @@ function Nav() {
                 onLogoutSuccess={Logout}
               ></GoogleLogout>
             </div>
-          )}
-        </div>
+          
+        </div>)}
       </div>
     </header>
   );

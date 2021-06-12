@@ -1,13 +1,19 @@
 .App { height:100%;
   text-align: center;
 }
-html{
  
-}
 .App,html {
   height: 100%;
+  font-family: 'Nunito', sans-serif;
 }
 
 #root{
   height: 100%;
+}
+h2 {
+  color: #453e3e;
+  padding-top: 3%;
+  margin-top: 3%;
+  padding: 20px;
+  font-size: 40px;
 }

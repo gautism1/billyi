@@ -22,6 +22,7 @@ function Alldocs() {
       )
       .catch(err=>console.log(err))
   }
+  
   useEffect(() => {
     axios
       .get(`/imageupload`, { withCredentials: true })

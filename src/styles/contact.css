@@ -1,4 +1,4 @@
-.newLetterInputDiv
+/* .newLetterInputDiv
 {
     display:flex;
      flex-wrap: wrap;
@@ -43,4 +43,51 @@
 .textareaContactDetails
 {
     padding-top:0;
+} */
+.contact
+{
+    padding:20px;
+    min-height: 100%;
+    margin:0    auto;
+    max-width: 712px;;
+}
+.contact >section >h4{
+    color:grey;
+    font-weight:none;
+    font-size: 16px;;
+}
+form{
+    margin:0 auto;
+    flex-wrap:wrap;
+    max-width:600px;
+    text-align: center;
+}
+form >input
+{    
+    width:500px;
+    height:30px;
+    padding:10px;
+    margin-top:2%;
+    outline:none;
+    font-size:20px;
+  color:grey;
+  
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.contactButton
+{
+    border:grey;
+    font-size: 20px;  
+    padding: 10px;
+    background: rgb(77 203 135);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width:160px;
+    margin-top:3%;
 }

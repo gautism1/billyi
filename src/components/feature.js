@@ -8,10 +8,9 @@ function Feature() {
     
       <div>
         <h2>
-          Hate searching bills ? <br></br>....Let Billyi do the work for you
+         Features we provide <br></br>
         </h2>
-        <h4>Billyi is the ultimate bills tracking & management tool</h4>
-        <div className="featureList">
+         <div className="featureList">
           <div className="featureCard">
             <div className="featureImageDiv">
               <img src={bill} alt="fatureimage"></img>

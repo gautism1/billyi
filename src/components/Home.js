@@ -46,15 +46,18 @@ function Home() {
       {!isLoggedIn && (
         <div className="titleName">
           <span>
-            <h1 className="homeH1">B.</h1>
+          <h2>
+          Hate searching bills ? <br></br>....Let Billyi do the work for you
+        </h2>
+        <h4>Billyi is the ultimate bills tracking & management tool</h4>
           </span>
         </div>
       )}
         <div className="loginDiv">
-          <div className="headings">
+          {/* <div className="headings">
             <h2>Lets's Get Started</h2>
             <h6>Bring memory on fingertips</h6>
-          </div>
+          </div> */}
      {  !isLoggedIn &&    <div className="LoginButtonOuterDiv">
             <GoogleLogin
               clientId={clientId}

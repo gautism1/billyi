@@ -4,9 +4,9 @@ function AboutCode() {
     return (
       <div className="mission">
          
-               <h1>
+               <h2>
                  Who  makes  "Billyi"
-                </h1>
+                </h2>
                 <div className="aboutImage">
                 </div>
                    <p>Billyi is made by
