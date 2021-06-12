@@ -23,7 +23,7 @@ function Nav() {
   return (
     <header>
       <div className="navItems">
-        <ul>
+        <ul className="navbarUl">
         <li>
             <NavLink to="/">Home</NavLink>
           </li>

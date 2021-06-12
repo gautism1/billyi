@@ -34,10 +34,10 @@ function Contact() {
 <form onSubmit={submitContactDetails} id="dataFormContact">
     <input type="text" required placeholder="First Name"></input>
     <input type="email"  required  placeholder="Enter your email"></input>
-    <input type="number" required placeholder="Contact no."></input>
-    <input type="text" required placeholder="Type your message here" className="textareaContactDetails"></input>
+    <input type="number" required placeholder="Contact no." max="10" min="10"></input>
+    <input type="text" required placeholder="Type here.." className="textareaContactDetails"></input>
     
-<button type="submit " className="contactButton" max="10" min="10">Send Message</button>
+<button type="submit " className="contactButton">Send Message</button>
 </form>
 </div>
       </section>

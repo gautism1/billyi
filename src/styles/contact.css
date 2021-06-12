@@ -64,13 +64,13 @@ form{
 }
 form >input
 {    
-    width:500px;
+   width:80%;
     height:30px;
     padding:10px;
     margin-top:2%;
     outline:none;
     font-size:20px;
-  color:grey;
+    color:grey;
   
 }
 input[type=number]::-webkit-inner-spin-button, 
@@ -90,4 +90,10 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
     width:160px;
     margin-top:3%;
+}
+.textareaContactDetails
+{
+    height:80px;
+    text-align: left;
+    top:0
 }
