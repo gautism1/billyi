@@ -49,9 +49,9 @@ function Nav() {
                 < div className="navTabs" id="documents" >Bills</div>
                
                 < div className="navTabs" id="features" >Features</div>
-{/*                  
+                 
                 < div className="navTabs" id="contact">Contact</div>
-                 */}
+                
               
            </ul>
         </div>}
@@ -69,9 +69,9 @@ function Nav() {
           <li>
             <NavLink to="/about">About</NavLink>
           </li>
-          {/* <li>
+          <li>
             <NavLink to="/contact">Contact</NavLink>
-          </li> */}
+          </li>
         </ul>
         {isLoggedIn && (   <div className="loginButton">
          
