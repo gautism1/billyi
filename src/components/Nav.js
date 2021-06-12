@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useState } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import "../styles/Nav.css";
 import { GoogleLogout } from "react-google-login";
@@ -20,8 +20,41 @@ function Nav() {
     logout();
     history.push("/");
   };
+
+  let [showSideNav,setSideNav]=useState(false);
+    let close=function(event)
+    {
+     
+      if(event.target.id)
+      { history.push(event.target.id)
+       setSideNav(!showSideNav)}
+    }
   return (
     <header>
+          <div className="hamburger">
+                  <button onClick={()=> setSideNav(!showSideNav)}>
+                    &#9776;
+                  </button>
+           </div>
+     
+       { showSideNav &&  
+      <div className="sideNav">
+          <div  className="close" onClick={()=> setSideNav(!showSideNav)}>
+            X 
+           </div>
+     <ul className="sidebar" onClick={close}>
+               
+                < div className="navTabs" id="about" >About</div>
+               
+                < div className="navTabs" id="documents" >Bills</div>
+               
+                < div className="navTabs" id="features" >Features</div>
+{/*                  
+                < div className="navTabs" id="contact">Contact</div>
+                 */}
+              
+           </ul>
+        </div>}
       <div className="navItems">
         <ul className="navbarUl">
         <li>
@@ -36,9 +69,9 @@ function Nav() {
           <li>
             <NavLink to="/about">About</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/contact">Contact</NavLink>
-          </li>
+          </li> */}
         </ul>
         {isLoggedIn && (   <div className="loginButton">
          

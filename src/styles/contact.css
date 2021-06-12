@@ -1,55 +1,9 @@
-/* .newLetterInputDiv
-{
-    display:flex;
-     flex-wrap: wrap;
-    padding:10px;
-    justify-content: center;
-}
-.contactDetailsInner{
-    text-align:left;
-    padding:20px;
-    height:auto;
-    width:auto;
-    
-}
-.newsletterSection
-{
-    margin-top:4%;
-}
-.contactDetails
-{
-    margin-right:10%;
-}
-.contactDetailsInner >h2
-{
-    margin-top:0;
-    color:grey;padding-left:0;
-}
-.textareaContactDetails
-{
-    height:auto;
-    min-height:60px;
-}
-.codeAddress
-{font-weight: bold;;
-   
-}
-.codeAddress >p{
-    color:grey;
-    font-size:16px;
-    padding-left: 0;
-    margin-top:0;
-}
-.textareaContactDetails
-{
-    padding-top:0;
-} */
 .contact
 {
     padding:20px;
     min-height: 100%;
     margin:0    auto;
-    max-width: 712px;;
+    max-width: 812px;;
 }
 .contact >section >h4{
     color:grey;
@@ -59,12 +13,12 @@
 form{
     margin:0 auto;
     flex-wrap:wrap;
-    max-width:600px;
+     
     text-align: center;
 }
 form >input
 {    
-   width:80%;
+    width:80%;
     height:30px;
     padding:10px;
     margin-top:2%;

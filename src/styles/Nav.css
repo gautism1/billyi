@@ -58,3 +58,41 @@ ul >li>a
     cursor: pointer;
     width:100px;
  }
+ .hamburger
+ {
+    display:none;
+    padding:10px;
+    text-align:right;
+    border:none;
+
+ }
+ .close
+ {
+    float:left;
+    padding:10px;
+ }
+ .hamburger >button{
+   font-size:15px;
+   height:30px;
+ }
+ .sideNav{
+   display:none;
+   }
+   .navTabs
+   {
+      padding:10px;
+   }
+ @media screen and (max-width: 600px) {
+   .hamburger
+ {
+    display:block;
+ }
+ .sideNav{
+   display:block;
+   }
+ .navItems
+ {
+    display: none;
+ }
+ }
+ 
