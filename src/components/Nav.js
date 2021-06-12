@@ -31,7 +31,7 @@ function Nav() {
     }
   return (
     <header>
-          <div className="hamburger">
+          {/* <div className="hamburger">
                   <button onClick={()=> setSideNav(!showSideNav)}>
                     &#9776;
                   </button>
@@ -50,11 +50,9 @@ function Nav() {
                
                 < div className="navTabs" id="features" >Features</div>
                  
-                < div className="navTabs" id="contact">Contact</div>
-                
-              
+                < div className="navTabs" id="contact">Contact</div>  
            </ul>
-        </div>}
+        </div>} */}
       <div className="navItems">
         <ul className="navbarUl">
         <li>
@@ -69,9 +67,9 @@ function Nav() {
           <li>
             <NavLink to="/about">About</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/contact">Contact</NavLink>
-          </li>
+          </li> */}
         </ul>
         {isLoggedIn && (   <div className="loginButton">
          

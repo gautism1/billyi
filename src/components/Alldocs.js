@@ -60,25 +60,25 @@ function Alldocs() {
             </div>
           )}
           <div className="allDocsList">
-            {userData &&
+            {userData && (userData!=null) &&
               userData.map((item, key) => (
                 <>
                   <div className="itemDetails">
                     <div className="DetailsIteInfo">
                       <div className="divisonDetails">
                         <div>
-                          <div className="title"> <span className="type">Name</span><br></br>
+                          <div className="title"> <span className="type">Name : </span> 
                           {item.title}</div>
-                          <div className="itemCategory"><span className="type">Category</span><br></br>
-                          {item.category}</div>
+                          <div className="itemCategory"><span className="type">Category : </span> 
+                           {item.category}</div>
                         </div>
                         <div>
-                          <div className="itemPrice"><span className="type">Amount</span><br></br>
+                          <div className="itemPrice"> 
                           
                           $ {item.price}</div>
                         </div>
                       </div>
-                      <div>----------------</div>
+                    
                       <div className="itemImageDiv">
                         <img
                           src={item.imageUrl}

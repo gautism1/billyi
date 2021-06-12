@@ -31,7 +31,7 @@ function App() {
                 ></Route>
                 <Route path="/features" exact component={Feature}></Route>
                 <Route path="/about" exact component={About}></Route>
-                <Route path="/contact" exact component={Contact}></Route>
+                {/* <Route path="/contact" exact component={Contact}></Route> */}
                 <PrivateRoute
                   path="/uploads"
                   component={CreateItem}
@@ -42,6 +42,7 @@ function App() {
                   component={Alldocs}
                   isAuth={!isLoggedIn}
                 ></PrivateRoute>
+                <Route path='*'></Route>
               </Suspense>
             </Switch>
             <Footer />

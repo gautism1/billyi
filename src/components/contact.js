@@ -1,5 +1,5 @@
 import "../styles/contact.css";
-import React from "react";
+import React,{useState} from "react";
 const axios = require("axios");
 
 function Contact() {
@@ -7,23 +7,16 @@ function Contact() {
   function submitContactDetails(event)
   {event.preventDefault();
      try{
-
-    var elements = document.getElementById("dataFormContact").elements;
-    var obj = {};
-
-    for (var i = 0; i < elements.length; i++) {
-      var item = elements.item(i);
-      obj[item.name] = item.value;
-    }
+ 
     
-       axios.post('/contact',obj)
-       .then(data=>console.log(data))
+      //  axios.post('/contact',obj)
+      //  .then(data=>console.log(data))
      }
      catch{
        console.log("error")
      }
   }
-  return (
+  return ( 
     <div className="contact">
       <section>
       <h2>Send us a message</h2>    
@@ -32,10 +25,10 @@ function Contact() {
       </h4>
        <div className="formDetails">
 <form onSubmit={submitContactDetails} id="dataFormContact">
-    <input type="text" required placeholder="First Name"></input>
+    <input type="text"   required placeholder="First Name"></input>
     <input type="email"  required  placeholder="Enter your email"></input>
-    <input type="number" required placeholder="Contact no." max="10" min="10"></input>
-    <input type="text" required placeholder="Type here.." className="textareaContactDetails"></input>
+    <input type="number" required placeholder="Contact no." ></input>
+    <input type="text"   required placeholder="Type here.." className="textareaContactDetails"></input>
     
 <button type="submit " className="contactButton">Send Message</button>
 </form>
