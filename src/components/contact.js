@@ -7,10 +7,6 @@ function Contact() {
   function submitContactDetails(event)
   {event.preventDefault();
      try{
- 
-    
-      //  axios.post('/contact',obj)
-      //  .then(data=>console.log(data))
      }
      catch{
        console.log("error")

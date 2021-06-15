@@ -25,14 +25,15 @@ function Alldocs() {
   
   useEffect(() => {
     axios
-      .get(`/imageupload`, { withCredentials: true })
+      .get(`/imageupload`, 
+      { withCredentials: true })
       .then((res) => {
         const rawCookie = document.cookie.split(";")[1].split("=")[1];
-
         var decoded = jwt.decode(rawCookie, { complete: true });
         updateState(decoded.payload);
 
-        if (res.data == null) setUserData(0);
+        if (res.data == null) 
+            setUserData(0);
         else setUserData(res.data);
       })
       .catch((err) => {

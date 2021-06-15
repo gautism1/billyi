@@ -26,7 +26,8 @@ function Nav() {
     {
      
       if(event.target.id)
-      { history.push(event.target.id)
+      { 
+        history.push(event.target.id)
        setSideNav(!showSideNav)}
     }
   return (

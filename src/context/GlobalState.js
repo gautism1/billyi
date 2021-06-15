@@ -22,6 +22,7 @@
       });
     }
   
+    
     async function logout() {
       dispatch({
         type: "user_logout",
