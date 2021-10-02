@@ -5,29 +5,27 @@ function AboutCode() {
       <div className="mission">
          
                <h2>
-                 Who  makes  "Billyi"
+                  "Billyi" ?
                 </h2>
-                <div className="aboutImage">
-                </div>
-                   <p>Billyi is made by
-                   </p>            
+                <div className="aboutBillyi">
+                <p>Billyi is your friend  who helps to find bills and important docs in no time .
+                   </p>   
+                   Let the bill paid by Billyi        
                    <br>
-                   </br>
-                   <span>
-                     Vipin Gautam
-                   </span>
-                   <p className="developerIntro">
-               <div className="developerImage ">
-                <img src={gauti} alt="Gauti_image">
-                </img>
-              </div>
-                     <a href="https://www.linkedin.com/in/vipingautamj/"> 
-                       Vipin Gautam : 
-                     </a>22 year .
-                       A software developer who's been writing code for over a year. Most recently he devloped Billyi lead programmer and co-designer of 
-                      <a href="https://notekia.herokuapp.com/" target="_blank" rel="noreferrer" > Notekia</a>, Mostly works in MERN, Core concepts of JS and building blocks of Web (HTML CSS).
-                      <b> Does free-lancing projects </b>
+                   </br>  
+                </div>
+                 
+                  
+                 <div className="aboutStarted">
+                   <div>
+                     <h2>
+                              How it all Started ?
+                     </h2>
+                   </div>
+                   <p>
+                     Solving the general of forgeting the things that are really important in daily livings.
                    </p>
+                 </div>
              
           
       </div>

@@ -17,12 +17,14 @@ function Home() {
     var b = document.cookie.match("(^|;)\\s*" + key + "\\s*=\\s*([^;]+)");
     return b ? b.pop() : "";
   }
+  
 
   const responseGoogle = (res) => {
-
+    console.log("heu")
     if(getCookie('cookieName')) {
       history.push("/documents");
     } else {
+     
       axios
       .post("/auth", { token: res.tokenId })
       .then((res) => {
@@ -38,12 +40,14 @@ function Home() {
       });
     }  
   };
+
   const onFail = (res) => {
     alert("Login failed :(");
   };
+
   return (
     <div className="mainBody">
-      {!isLoggedIn && (
+      
         <div className="titleName">
           <span>
           <h2>
@@ -52,12 +56,9 @@ function Home() {
         <h4>Billyi is the ultimate bills tracking & management tool</h4>
           </span>
         </div>
-      )}
+   
         <div className="loginDiv">
-          {/* <div className="headings">
-            <h2>Lets's Get Started</h2>
-            <h6>Bring memory on fingertips</h6>
-          </div> */}
+         
      {  !isLoggedIn &&    <div className="LoginButtonOuterDiv">
             <GoogleLogin
               clientId={clientId}
@@ -75,6 +76,11 @@ function Home() {
               )}
             />
           </div>}
+          {
+            isLoggedIn && <div>
+              You are already logged in ,plasse visit your documenta or create a new document
+              </div>
+          }
         </div>
     </div>
   );

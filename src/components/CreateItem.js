@@ -34,7 +34,10 @@ function CreateItem() {
       })
       .then((data) => {
         alert("kudos !! Product details have been successfully uploaded ");
+
         document.getElementById("dataform").reset();
+ 
+
       })
       .catch((err) => {
         console.log(err);

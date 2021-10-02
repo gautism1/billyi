@@ -24,7 +24,6 @@ function Nav() {
   let [showSideNav,setSideNav]=useState(false);
     let close=function(event)
     {
-     
       if(event.target.id)
       { 
         history.push(event.target.id)
